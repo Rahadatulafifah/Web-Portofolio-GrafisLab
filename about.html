@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrafisLab | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        #mainHeader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #mainHeader nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        #mainHeader a {
+            color: #00173D;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #mainHeader a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content styling */
+        .about-section {
+            margin-top: 80px;  /* Memberikan ruang untuk fixed header */
+            background-color: white;
+            min-height: calc(100vh - 80px);
+            color: #333;
+            overflow-y: auto;
+        }
+
+        .about-header {
+            padding: 20px 50px;
+            margin-bottom: 50px;
+            background-color: white;
+        }
+
+        .about-title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-header {
+            padding: 0 50px;
+            margin-bottom: 50px;
+            background-color: white;
+            position: sticky;
+            top: 20px; /* Mengubah dari 40px menjadi 20px agar lebih ke atas */
+            z-index: 10;
+        }
+
+        .section-title-wrapper {
+            flex-shrink: 0;
+            width: 200px;
+        }
+
+        .section-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+            color: #00173D;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #00173D;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-subtitle {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2rem;
+            color: #00173D;
+            margin-bottom: 40px;
+            max-width: 800px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .content-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-container {
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+        }
+
+        .profile-section,
+        .skill-section,
+        .experience-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-image {
+            width: 100%;
+            height: 400px;
+            background-image: url('gambar/gelap.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-content-wrapper {
+            padding: 0 50px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #00173D;
+            flex-shrink: 0;
+            width: 200px;
+        }
+
+        .section-content {
+            flex-grow: 1;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 20px;
+        }
+
+        /* Styling untuk My Profile */
+        .section-content p {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling untuk Skill */
+        .skill-category {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skill-category h3 {
+            color: #00173D;
+            margin-bottom: 15px;
+            font-family: 'Anton', sans-serif;
+        }
+
+        .skill-category p {
+            color: #333;
+            line-height: 1.8;
+            background: none;
+            padding: 0;
+        }
+
+        /* Styling untuk Experience - sudah sesuai */
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+        }
+
+        /* Styling scrollbar yang konsisten untuk semua section */
+        .section-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .section-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .section-content::-webkit-scrollbar-thumb {
+            background: #00173D;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="library.html">Library</a>
+            <a href="blog.html">Blog</a>
+            <a href="#">CreativeLab</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="about-header">
+            <h1 class="about-title">ABOUT</h1>
+            <p class="about-subtitle">A CREATIVE MIND WITH PASSION, SKILLS, EXPERIENCES, AND EVERYTHING THAT FEELS LIKE LEARNING MORE.</p>
+        </div>
+
+        <div class="content-sections">
+            <!-- MY PROFILE -->
+            <div class="section-container">
+                <div class="profile-section">
+                    <div class="section-image"></div>
+                    <div class="section-content-wrapper">
+                        <h2 class="section-title">MY PROFILE</h2>
+                        <div class="section-content">
+                            <p>I am a Digital Business student with a passion for UI/UX, data science, graphic design, photography, and videography. I have experience in creating creative marketing solutions and user experiences that effectively engage target audiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SKILL SECTION -->
+            <div class="section-container">
+                <div class="skill-section">
+                    <div class="section-image"></div>
+                    <div class="section-content-wrapper">
+                        <h2 class="section-title">SKILL</h2>
+                        <div class="section-content">
+                            <div class="skill-grid">
+                                <div class="skill-category">
+                                    <h3>Design & Branding</h3>
+                                    <p>Adobe Creative Suite (Photoshop, Illustrator, InDesign)<br>
+                                    Figma<br>
+                                    Brand Identity Design<br>
+                                    Visual Communication</p>
+                                </div>
+                                <div class="skill-category">
+                                    <h3>Content Creation</h3>
+                                    <p>Photography<br>
+                                    Videography<br>
+                                    Content Strategy<br>
+                                    Social Media Management</p>
+                                </div>
+                                <div class="skill-category">
+                                    <h3>Data & Business Strategy</h3>
+                                    <p>Data Analysis<br>
+                                    Market Research<br>
+                                    Digital Marketing<br>
+                                    Business Development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE SECTION -->
+            <div class="section-container">
+                <div class="experience-section">
+                    <div class="section-image"></div>
+                    <div class="section-content-wrapper">
+                        <h2 class="section-title">EXPERIENCE</h2>
+                        <div class="section-content">
+                            <div class="experience-item">
+                                <h3 class="experience-title">Data Junior High School</h3>
+                                <p class="experience-date">School Communication & Information Committee (Design & Documentation) | 2021</p>
+                                <p class="experience-description">Managed school event documentation and created promotional materials for various school activities.</p>
+                            </div>
+                            <div class="experience-item">
+                                <h3 class="experience-title">FiGo 2023 - Present</h3>
+                                <p class="experience-description">Working on various digital business projects and expanding knowledge in the field.</p>
+                            </div>
+                            <div class="experience-item">
+                                <h3 class="experience-title">Tellytrack (Designer Guild) | 2024</h3>
+                                <p class="experience-description">Contributing to design projects and collaborating with other creative professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-title">GRAFISLAB</div>
+        <div class="footer-sections">
+            <div>
+                <h4>(Pages)</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Library</a>
+                <a href="#">Blog</a>
+                <a href="#">Creativelab</a>
+                <a href="#">Contact</a>
+            </div>
+            <div>
+                <h4>(Social)</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Behance</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>By Rahadatul Afifah</p>
+            <p>Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL SCRIPT -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

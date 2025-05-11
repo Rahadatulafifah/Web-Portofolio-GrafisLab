@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrafisLab | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="library.html">Library</a>
+      <a href="blog.html">Blog</a>
+      <a href="#">CreativeLab</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- kosong: gambar penuh saja tanpa teks -->
+  </section>
+
+  <!-- DESKRIPSI SECTION (CENTER) -->
+  <section class="content-full deskripsi">
+    <div class="content-center">
+      <h2>GrafisLab, a digital space where I build my portfolio, share insights, and connect creativity with strategy.</h2>
+      <p>Here, you can find various projects that I have worked on, explore new ideas, and tips and insights about the digital world. Let's learn and grow together, because the best creativity is born from collaboration and innovation.</p>
+    </div>
+  </section>
+
+  <!-- BLOG SECTION (LEFT) -->
+  <section class="content-full blog">
+    <div class="content-left">
+      <h2 style="color: #333;">5 Tips Desain Grafis untuk Pemula agar Karyamu Lebih Menarik</h2>
+      <p style="color: #333;">Memulai perjalanan di dunia desain grafis bisa terasa menantang, terutama jika kamu masih pemula. Tapi jangan khawatir! Dengan memahami beberapa prinsip dasar dan menerapkan teknik yang tepat, kamu bisa membuat desain yang tidak hanya estetis tetapi juga efektif. Dalam artikel ini, aku...</p>
+      <a href="blog-tips-desain.html" style="color: #00173D !important; text-decoration: underline; display: inline-block; margin-top: 10px;">Read more</a>
+    </div>
+  </section>
+
+  <!-- HELLO SECTION (LEFT) -->
+  <section class="content-full hello">
+    <div class="content-left">
+      <h2>Hello I’m Atul</h2>
+      <p>I’m a Digital Business student with a passion for graphic design, photography, videography, and UI/UX. I love exploring creative ways to market products and enhance user experiences through data-driven insights.</p>
+      <p>Welcome to my portfolio!</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-title">GRAFISLAB</div>
+
+    <div class="footer-sections">
+      <div>
+        <h4>(Pages)</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Library</a>
+        <a href="#">Blog</a>
+        <a href="#">Creativelab</a>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <h4>(Social)</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>By Rahadatul Afifah</p>
+      <p>Back to Top</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL SCRIPT -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

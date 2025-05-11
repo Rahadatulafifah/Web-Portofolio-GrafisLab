@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrafisLab | Library</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header styling dari about.html */
+        #mainHeader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #mainHeader nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        #mainHeader a {
+            color: #00173D;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #mainHeader a:hover {
+            text-decoration: underline;
+        }
+
+        /* Library specific styling */
+        .library-header {
+            margin-top: 80px;
+            padding: 0 50px;
+            margin-bottom: 50px;
+            background-color: white;
+            z-index: 10;
+        }
+
+        .library-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #00173D;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .library-subtitle {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2rem;
+            color: #00173D;
+            margin-bottom: 40px;
+            max-width: 800px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Footer styling seperti home */
+        footer {
+            padding: 4rem 2rem 2rem 2rem;
+            background-color: #00173D;
+            color: white;
+        }
+
+        .footer-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-sections {
+            display: flex;
+            gap: 6rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-sections div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-sections h4 {
+            font-family: 'Anton', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .footer-sections a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="library.html">Library</a>
+            <a href="blog.html">Blog</a>
+            <a href="#">CreativeLab</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- LIBRARY HEADER -->
+    <div class="library-header">
+        <h1 class="library-title">LIBRARY</h1>
+        <p class="library-subtitle">EVERY PROJECT HAS A STORY. DISCOVER MY WORK, PROCESS, AND LESSONS LEARNED.</p>
+    </div>
+
+    <!-- LIBRARY GRID -->
+    <div class="library-grid">
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="Digital Marketing">
+            <h2 class="library-item-title">Digital Marketing</h2>
+            <p class="library-item-description">Mengembangkan strategi pemasaran digital yang efektif untuk berbagai platform.</p>
+        </div>
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="Web Personal">
+            <h2 class="library-item-title">Web Personal</h2>
+            <p class="library-item-description">Merancang dan mengembangkan website personal dengan fokus pada user experience.</p>
+        </div>
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="Pitch Deck">
+            <h2 class="library-item-title">Pitch Deck</h2>
+            <p class="library-item-description">Membuat presentasi yang menarik dan efektif untuk keperluan bisnis.</p>
+        </div>
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="GDSC UI/UX Class">
+            <h2 class="library-item-title">GDSC UI/UX Class</h2>
+            <p class="library-item-description">Pembelajaran dan pengembangan skill dalam UI/UX design bersama komunitas.</p>
+        </div>
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="Dashboard Analitik">
+            <h2 class="library-item-title">Dashboard Analitik</h2>
+            <p class="library-item-description">Visualisasi data dan analisis untuk pengambilan keputusan yang lebih baik.</p>
+        </div>
+        <div class="library-item">
+            <img src="gambar/gelap.png" alt="Short Movie">
+            <h2 class="library-item-title">Short Movie</h2>
+            <p class="library-item-description">Produksi film pendek dengan fokus pada storytelling yang menarik.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-title">GRAFISLAB</div>
+        <div class="footer-sections">
+            <div>
+                <h4>(Pages)</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="library.html">Library</a>
+                <a href="#">Blog</a>
+                <a href="#">CreativeLab</a>
+                <a href="#">Contact</a>
+            </div>
+            <div>
+                <h4>(Social)</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Behance</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>By Rahadatul Afifah</p>
+            <p>Back to Top</p>
+        </div>
+    </footer>
+</body>
+</html>
+<style>
+    .library-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .library-item {
+        position: relative;
+        height: 250px;  /* Mengubah dari 200px menjadi 250px */
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .library-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .library-item:hover img {
+        opacity: 0.5;
+    }
+
+    .library-item-title {
+        position: absolute;
+        bottom: 40px;  /* Posisi dari bawah */
+        left: 40px;   /* Posisi dari kiri */
+        color: white;
+        font-size: 2.5rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        z-index: 2;
+    }
+
+    /* Menghapus deskripsi yang tidak diperlukan */
+    .library-item-description {
+        display: none;
+    }
+</style>
