@@ -15,13 +15,10 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
-  padding: 1rem 2rem;
-  transition: background-color 0.3s ease;
-}
-
-header.scrolled {
-  background-color: #00173D;
+  background-color: transparent;  /* Ubah dari white ke transparent */
+  padding: 20px;
+  transition: background-color 0.3s ease;  /* Tambahkan transisi */
+  box-shadow: none;  /* Hapus box shadow */
 }
 
 nav {
@@ -31,13 +28,55 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: white;  /* Ubah dari #00173D ke white */
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease;  /* Tambahkan transisi */
 }
 
 nav a:hover {
   text-decoration: underline;
+}
+
+/* Style untuk header saat di-scroll */
+header.scrolled {
+  background-color: #00173D;  /* Ubah ke warna biru tua */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header.scrolled nav a {
+  color: white;  /* Tetap putih saat di-scroll */
+}
+
+/* Styling untuk header halaman - gunakan ini untuk semua halaman */
+.page-header, .blog-header, .library-header, .contact-header {
+    margin-top: 120px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    background-color: white;
+    z-index: 10;
+}
+
+.page-title, .blog-title, .library-title, .contact-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    color: #00173D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.page-subtitle, .blog-subtitle, .library-subtitle, .contact-subtitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    color: #00173D;
+    max-width: 800px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 /* HERO & FULLSCREEN SECTIONS */
@@ -166,4 +205,300 @@ footer {
   .content-full h2 {
     font-size: 1.5rem;
   }
+}
+
+
+/* CreativeLab Styles */
+.blog-header {
+    margin-top: 80px;
+    padding: 0 40px;
+    margin-bottom: 20px;
+    background-color: white;
+    z-index: 10;
+}
+
+.blog-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    color: #00173D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.blog-subtitle {
+    font-size: 1rem;
+    color: #00173D;
+    max-width: 800px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    height: 100vh;
+    background-image: url('./gambar/bgtanpatulisan.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.welcome-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 8rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: -30px;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.bottom-text-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.to-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 7rem;
+    color: #FF0000;
+    margin-right: -15px;
+    transform: translateY(-5px);
+}
+
+.grafislab-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 8rem;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Contact Styles */
+.contact-header {
+    margin-top: 120px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    background-color: white;
+    z-index: 10;
+}
+
+.contact-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    color: #00173D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: #00173D;
+    max-width: 800px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 40px;
+}
+
+.map-container {
+    flex: 2;
+    height: 300px;
+}
+
+/* Library Styles */
+.library-header {
+    margin-top: 120px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    background-color: white;
+    z-index: 10;
+}
+
+.library-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    color: #00173D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.library-subtitle {
+    font-size: 1.2rem;
+    color: #00173D;
+    max-width: 800px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Digital Marketing Styles */
+.header-section {
+    padding: 40px;
+    background-color: white;
+}
+
+.meta-info {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 40px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.meta-value {
+    color: #00173D;
+    font-size: 1rem;
+}
+
+.back-button {
+    display: inline-block;
+    color: #00173D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Blog Grid Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.blog-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-info {
+    margin-top: 20px;
+}
+
+.blog-category {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.pagination-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00173D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00173D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pagination-button.active {
+    background-color: #00173D;
+    color: white;
+}
+
+/* Skill Category Styles */
+.skill-category {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.skill-category h3 {
+    color: #00173D;
+    margin-bottom: 15px;
+    font-family: 'Anton', sans-serif;
+}
+
+.skill-category p {
+    color: #333;
+    line-height: 1.8;
+    background: none;
+    padding: 0;
+}
+
+/* Experience Styles */
+.experience-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+/* Scrollbar Styles */
+.section-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.section-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.section-content::-webkit-scrollbar-thumb {
+    background: #00173D;
+    border-radius: 4px;
 }

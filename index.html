@@ -5,9 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GrafisLab | Home</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    .hero-section {
+      height: 100vh;
+      background-image: url('./gambar/bgtanpatulisan.png'); /* Menggunakan path relatif ke folder gambar lokal */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .welcome-text {
+      font-family: 'Anton', sans-serif;
+      font-size: 8rem;
+      color: white;
+      text-align: center;
+      letter-spacing: 2px;
+      margin-bottom: -30px;
+      line-height: 1;
+      padding-bottom: 10px; /* Mengubah padding untuk jarak 1 cm */
+    }
+
+    .bottom-text-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px; /* Mengubah margin untuk jarak 1 cm */
+    }
+
+    .to-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 7rem;
+      color: #FF0000;
+      margin-right: -15px;
+      transform: translateY(-5px);
+    }
+
+    .grafislab-text {
+      font-family: 'Anton', sans-serif;
+      font-size: 8rem;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    /* Menghapus style .scrolled karena kita tidak akan mengubah warna navbar */
+    #mainHeader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #00173D;
+      padding: 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #mainHeader nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    #mainHeader a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #mainHeader a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <header id="mainHeader">
     <nav>
@@ -15,14 +90,18 @@
       <a href="about.html">About</a>
       <a href="library.html">Library</a>
       <a href="blog.html">Blog</a>
-      <a href="#">CreativeLab</a>
-      <a href="#">Contact</a>
+      <a href="creativelab.html">CreativeLab</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <!-- kosong: gambar penuh saja tanpa teks -->
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1 class="welcome-text">WELCOME</h1>
+    <div class="bottom-text-container">
+      <h1 class="to-text">To</h1>
+      <h1 class="grafislab-text">GRAFISLAB</h1>
+    </div>
   </section>
 
   <!-- DESKRIPSI SECTION (CENTER) -->
@@ -38,7 +117,7 @@
     <div class="content-left">
       <h2 style="color: #333;">5 Tips Desain Grafis untuk Pemula agar Karyamu Lebih Menarik</h2>
       <p style="color: #333;">Memulai perjalanan di dunia desain grafis bisa terasa menantang, terutama jika kamu masih pemula. Tapi jangan khawatir! Dengan memahami beberapa prinsip dasar dan menerapkan teknik yang tepat, kamu bisa membuat desain yang tidak hanya estetis tetapi juga efektif. Dalam artikel ini, aku...</p>
-      <a href="blog-tips-desain.html" style="color: #00173D !important; text-decoration: underline; display: inline-block; margin-top: 10px;">Read more</a>
+      <a href="umkm-go-digital.html" style="color: #00173D !important; text-decoration: underline; display: inline-block; margin-top: 10px;">Read more</a>
     </div>
   </section>
 
@@ -75,20 +154,18 @@
 
     <div class="footer-bottom">
       <p>By Rahadatul Afifah</p>
-      <p>Back to Top</p>
+      <a href="#" onclick="scrollToTop()" style="cursor: pointer; text-decoration: none; color: white;">Back to Top</a>
     </div>
   </footer>
 
-  <!-- SCROLL SCRIPT -->
+  <!-- Menghapus script scroll yang lama dan menambahkan script baru untuk back to top -->
   <script>
-    window.addEventListener('scroll', function () {
-      const header = document.getElementById('mainHeader');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 
 </body>

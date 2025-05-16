@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrafisLab | Library</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <style>
         /* Header styling dari about.html */
         #mainHeader {
@@ -36,8 +37,8 @@
 
         /* Library specific styling */
         .library-header {
-            margin-top: 80px;
-            padding: 0 50px;
+            margin-top: 120px;
+            padding: 0 40px;
             margin-bottom: 50px;
             background-color: white;
             z-index: 10;
@@ -46,20 +47,22 @@
         .library-title {
             font-family: 'Anton', sans-serif;
             font-size: 4rem;
-            margin-bottom: 20px;
             color: #00173D;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
         }
 
         .library-subtitle {
-            font-family: 'Anton', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.2rem;  /* Sesuaikan dengan about */
             color: #00173D;
-            margin-bottom: 40px;
             max-width: 800px;
-            letter-spacing: 1px;
+            line-height: 1.6;
             text-transform: uppercase;
+            margin-bottom: 40px;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 1px;
+            font-weight: bold;
         }
 
         /* Footer styling seperti home */
@@ -119,46 +122,47 @@
             <a href="about.html">About</a>
             <a href="library.html">Library</a>
             <a href="blog.html">Blog</a>
-            <a href="#">CreativeLab</a>
-            <a href="#">Contact</a>
+            <a href="creativelab.html">CreativeLab</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <!-- LIBRARY HEADER -->
-    <div class="library-header">
-        <h1 class="library-title">LIBRARY</h1>
-        <p class="library-subtitle">EVERY PROJECT HAS A STORY. DISCOVER MY WORK, PROCESS, AND LESSONS LEARNED.</p>
+    <div class="page-header">
+        <h1 class="page-title" style="font-size: 4rem; margin-bottom: 0; color: #00173D;">LIBRARY</h1>
+        <p class="page-subtitle" style="font-size: 1rem; color: #00173D; margin-top: 10px; max-width: 800px; line-height: 1.4;">A CREATIVE MIND WITH PASSION, SKILLS, EXPERIENCES, AND EVERYTHING THAT FEELS LIKE LEARNING MORE.</p>
     </div>
 
     <!-- LIBRARY GRID -->
     <div class="library-grid">
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="Digital Marketing">
-            <h2 class="library-item-title">Digital Marketing</h2>
-            <p class="library-item-description">Mengembangkan strategi pemasaran digital yang efektif untuk berbagai platform.</p>
+            <a href="digital-marketing.html" style="text-decoration: none; display: block; height: 100%;">
+                <img src="gambar/talky.png" alt="Digital Marketing">
+                <h2 class="library-item-title">Digital Marketing</h2>
+            </a>
         </div>
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="Web Personal">
+            <img src="gambar/webdulu.png" alt="Web Personal">
             <h2 class="library-item-title">Web Personal</h2>
             <p class="library-item-description">Merancang dan mengembangkan website personal dengan fokus pada user experience.</p>
         </div>
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="Pitch Deck">
+            <img src="gambar/riasin.png" alt="Pitch Deck">
             <h2 class="library-item-title">Pitch Deck</h2>
             <p class="library-item-description">Membuat presentasi yang menarik dan efektif untuk keperluan bisnis.</p>
         </div>
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="GDSC UI/UX Class">
+            <img src="gambar/gdsc.png" alt="GDSC UI/UX Class">
             <h2 class="library-item-title">GDSC UI/UX Class</h2>
             <p class="library-item-description">Pembelajaran dan pengembangan skill dalam UI/UX design bersama komunitas.</p>
         </div>
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="Dashboard Analitik">
+            <img src="gambar/analitik.png" alt="Dashboard Analitik">
             <h2 class="library-item-title">Dashboard Analitik</h2>
             <p class="library-item-description">Visualisasi data dan analisis untuk pengambilan keputusan yang lebih baik.</p>
         </div>
         <div class="library-item">
-            <img src="gambar/gelap.png" alt="Short Movie">
+            <img src="gambar/shortmovie.png" alt="Short Movie">
             <h2 class="library-item-title">Short Movie</h2>
             <p class="library-item-description">Produksi film pendek dengan fokus pada storytelling yang menarik.</p>
         </div>
@@ -233,5 +237,16 @@
     /* Menghapus deskripsi yang tidak diperlukan */
     .library-item-description {
         display: none;
+    }
+
+    .library-item a {
+        color: inherit;
+        display: block;
+        height: 100%;
+        position: relative;
+    }
+
+    .library-item:hover {
+        cursor: pointer;
     }
 </style>
