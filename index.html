@@ -6,6 +6,7 @@
   <title>GrafisLab | Home</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     .hero-section {
       height: 100vh;
@@ -68,17 +69,27 @@
     #mainHeader nav {
       display: flex;
       justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
       gap: 30px;
     }
 
-    #mainHeader a {
+    .search-icon {
+      position: absolute;
+      right: 0;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
     }
 
-    #mainHeader a:hover {
-      text-decoration: underline;
+    .search-icon:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -86,12 +97,17 @@
   <!-- HEADER -->
   <header id="mainHeader">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="library.html">Library</a>
-      <a href="blog.html">Blog</a>
-      <a href="creativelab.html">CreativeLab</a>
-      <a href="contact.html">Contact</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="library.html">Library</a>
+        <a href="blog.html">Blog</a>
+        <a href="creativelab.html">CreativeLab</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
     </nav>
   </header>
 
